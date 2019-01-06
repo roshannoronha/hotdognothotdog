@@ -1,3 +1,11 @@
+#Written by Roshan Noronha
+#December 20, 2019
+
+#Purpose: This is a CNN that will recognize if an image is a hotdog or not.
+
+#NOTE1: This model is ~60% accurate and is still being worked on
+#NOTE2: Hotdog data retrived from https://www.kaggle.com/dansbecker/hot-dog-not-hot-dog
+
 from keras.models import Sequential
 from keras.layers import Activation, Dropout, Flatten, Dense, Convolution2D, MaxPooling2D, ZeroPadding2D
 from keras.preprocessing.image import ImageDataGenerator
@@ -43,6 +51,7 @@ model.add(Convolution2D(64,3,3, input_shape=(img_width,img_height, 3)))
 model.add(Activation('relu'))
 model.add(MaxPooling2D(pool_size= (2,2)))
 
+#this is the final layer
 model.add(Flatten())
 model.add(Dense(64))
 model.add(Activation('relu'))
