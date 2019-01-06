@@ -1,3 +1,8 @@
+#Written by Roshan Noronha
+#December 21, 2018
+
+#Purpose: This imports a CNN and checks if it can accurately identify a hotdog
+
 import os
 
 from keras.models import load_model
